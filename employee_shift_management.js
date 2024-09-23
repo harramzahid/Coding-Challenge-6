@@ -10,4 +10,11 @@ const employees = [
 
 console.log(employees)
 
+// Task 2 create a Function to Display Employee Shift Details
+function displayEmployeeShift (employee) {
+    employees.forEach(worker => (worker.name, worker.shifts))
+      return (employee)
+    (console.log(`Employee Shift Details: ${employee}`))
+}
+
 //
