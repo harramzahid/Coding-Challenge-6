@@ -30,6 +30,7 @@ function assignShift( employee) {
         return;
     }
     employee.shifts.push({ day: day, hours: hours });
+
     console.log(`${employeeName} has been assigned a new shift on ${day}, for ${hours} hours.`);
 } 
 // Task 4 Create a Function to Calculate Total Hours Worked
@@ -40,11 +41,11 @@ function calculateTotalHours(employeeName) {
         return;
     }
     let totalHours = employee.shifts.reduce((sum, shift) => sum + shift.hours, 0);
+
     console.log(`${employeeName} has worked ${totalHours} hours.`);
-    return totalHours;
 }
 
-//Task 6 Create a Function to List Employees with Free Days
+//Task 5 Create a Function to List Employees with Free Days
 function listAvailableEmployees(day) {
     let availableEmployees = employees.filter(employee => !employee.shifts.some(shift => shift.day === day));
     if (availableEmployees.length === 0) {
